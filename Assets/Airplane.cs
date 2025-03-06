@@ -28,22 +28,22 @@ public class Airplane : MonoBehaviour
         }
 
         //2. Lift Force - Simulates how airplanes gain altitude
-        Vector3 lift = Vector3.Project(rb.linearVelocity, transform.forward);
+       Vector3 lift = Vector3.Project(rb.linearVelocity, transform.forward);
         rb.AddForce(transform.up * lift.magnitude * liftBooster);
 
-        // 3️. Drag (Air Resistance) - Prevents infinite acceleration
-        rb.linearDamping = rb.linearVelocity.magnitude * drag;
-        rb.angularDamping = rb.linearVelocity.magnitude * angularDrag;
+        /*      // 3️. Drag (Air Resistance) - Prevents infinite acceleration
+             rb.linearDamping = rb.linearVelocity.magnitude * drag;
+             rb.angularDamping = rb.linearVelocity.magnitude * angularDrag;
 
-        //4. Rotation Controls - Pitch, Yaw, and Roll
-        float yaw = Input.GetAxis("Horizontal") * yawPower;   // Left/Right (A/D)
-        float pitch = Input.GetAxis("Vertical") * pitchPower; // Nose Up/Down (W/S)
-        float roll = Input.GetAxis("Roll") * rollPower;       // Roll (Q/E)
+             //4. Rotation Controls - Pitch, Yaw, and Roll
+             float yaw = Input.GetAxis("Horizontal") * yawPower;   // Left/Right (A/D)
+             float pitch = Input.GetAxis("Vertical") * pitchPower; // Nose Up/Down (W/S)
+             float roll = Input.GetAxis("Roll") * rollPower;       // Roll (Q/E)
 
-        rb.AddTorque(transform.up * yaw);       // Yaw (Turn left/right)
-        rb.AddTorque(transform.right * pitch);  // Pitch (Nose up/down)
-        rb.AddTorque(transform.forward * roll); // Roll (Tilting)
-
+             rb.AddTorque(transform.up * yaw);       // Yaw (Turn left/right)
+             rb.AddTorque(transform.right * pitch);  // Pitch (Nose up/down)
+             rb.AddTorque(transform.forward * roll); // Roll (Tilting)
+     */
     }
 }
 
